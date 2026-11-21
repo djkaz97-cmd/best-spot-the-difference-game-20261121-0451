@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gloaming — a spot-the-difference hunt</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<main id="app">
+  <header id="hud-top">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">◐</span>
+      <span class="brand-name">GLOAMING</span>
+      <span class="brand-sub">spot the difference</span>
+    </div>
+    <div id="round-label">Round 1 · Night Market</div>
+    <div class="score-box">
+      <span class="score-caption">SCORE</span>
+      <span id="score">0</span>
+      <span id="combo" class="combo hidden">×2</span>
+    </div>
+  </header>
+
+  <section id="stage">
+    <div class="panel-wrap" id="wrap-left">
+      <div class="panel-label">ORIGINAL</div>
+      <canvas id="panel-left" width="560" height="600"></canvas>
+    </div>
+    <div class="panel-wrap" id="wrap-right">
+      <div class="panel-label">ALTERED</div>
+      <canvas id="panel-right" width="560" height="600"></canvas>
+    </div>
+    <div id="overlay" class="hidden">
+      <div id="overlay-card"></div>
+    </div>
+  </section>
+
+  <footer id="hud-bottom">
+    <div id="left-chip" title="Differences still hidden">
+      <b id="left-count">5</b><span>LEFT</span>
+    </div>
+    <div id="timer-box">
+      <div id="timer-bar"><div id="timer-fill"></div></div>
+      <span id="timer-text">90s</span>
+    </div>
+    <div class="hud-buttons">
+      <button id="hint-btn" type="button">HINT <kbd>H</kbd> · <span id="hint-count">3</span></button>
+      <button id="mute-btn" type="button">SOUND ON <kbd>M</kbd></button>
+      <button id="restart-btn" type="button">RESTART <kbd>R</kbd></button>
+    </div>
+  </footer>
+</main>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
